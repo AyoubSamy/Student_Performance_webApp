@@ -1,0 +1,6 @@
+cd frontend
+npm install
+npm run start
+cd backend
+pip install flask
+flask run

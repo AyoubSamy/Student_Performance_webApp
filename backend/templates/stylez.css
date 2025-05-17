@@ -1,0 +1,109 @@
+/* Basic styles */
+body {
+    font-family: sans-serif; /* Use a sans-serif font for readability */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navigation bar */
+  nav {
+    background-color: #3F579A; /* Blue background for navigation */
+    color: white; /* White text for navigation */
+    padding: 10px 20px;
+  }
+  
+  nav ul {
+    display: flex; /* Arrange navigation items horizontally */
+    list-style: none; /* Remove default bullet points */
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-right: 20px; /* Add space between navigation items */
+  }
+  
+  nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit white text color */
+  }
+  
+  /* Main content */
+  main {
+    padding: 20px;
+  }
+  
+  /* Form container */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for form */
+    align-items: center;
+  }
+  
+  /* Form section */
+  section {
+    background-color: #f0f0f0; /* Light gray background for form */
+    padding: 20px;
+    border-radius: 5px; /* Add rounded corners */
+  }
+  
+  hgroup {
+    margin-bottom: 15px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  h3 {
+    font-size: 16px;
+  }
+  
+  /* Form elements */
+  label {
+    display: block; /* Display labels on separate lines */
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  select,
+  input[type="text"] {
+    width: 100%; /* Make elements fill available space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    border-radius: 3px; /* Add subtle rounded corners */
+  }
+  
+  button {
+    background-color: #3F579A; /* Blue background for button */
+    color: white; /* White text for button */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Add space after form elements */
+  }
+  
+  button:hover {
+    background-color: #2F4A81; /* Darken blue on hover */
+  }
+  
+  /* Prediction section (optional) */
+  #prediction {
+    margin-top: 20px;
+    color: #3F579A; /* Blue color for prediction text */
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+  }
+  
+  footer a {
+    color: #3F579A; /* Blue color for footer links */
+  }
+  

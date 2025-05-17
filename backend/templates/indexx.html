@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>Student Performance Prediction</title>
+</head>
+<body>
+<nav class="container-fluid">
+    <ul>
+        <li><strong>Student Performance App</strong></li>
+    </ul>
+    <ul>
+        <li><a href="#form">Form</a></li>
+        <li><a href="#prediction">Prediction</a></li>
+        <li><a href="#" role="button">Logout</a></li>
+    </ul>
+</nav>
+<main class="container">
+    <div class="grid">
+        <section>
+            <hgroup>
+                <h2>Student Performance Prediction Form</h2>
+                <h3>Enter the student details below to predict performance:</h3>
+            </hgroup>
+            <form action="/predict" method="post">
+                <label for="G1">G1 Grade:</label>
+                <select name="G1" id="G1" required>
+                    {% for i in range(21) %}
+                    <option value="{{ i }}">{{ i }}</option>
+                    {% endfor %}
+                </select>
+                
+                <label for="G2">G2 Grade:</label>
+                <select name="G2" id="G2" required>
+                    {% for i in range(21) %}
+                    <option value="{{ i }}">{{ i }}</option>
+                    {% endfor %}
+                </select>
+
+                <label for="studytime">Study Time:</label>
+                <select name="studytime" id="studytime" required>
+                    <option value="1">Less than 2 hours</option>
+                    <option value="2">2 to 5 hours</option>
+                    <option value="3">5 to 10 hours</option>
+                    <option value="4">More than 10 hours</option>
+                </select>
+
+                <label for="failures">Failures:</label>
+                <select name="failures" id="failures" required>
+                    <option value="0">0 failures</option>
+                    <option value="1">1 failure</option>
+                    <option value="2">2 failures</option>
+                    <option value="3">3 or more failures</option>
+                </select>
+
+                <label for="Medu">Mother's Education:</label>
+                <select name="Medu" id="Medu" required>
+                    <option value="0">None</option>
+                    <option value="1">Primary education (up to 4th grade)</option>
+                    <option value="2">5th to 9th grade</option>
+                    <option value="3">Secondary education</option>
+                    <option value="4">Higher education</option>
+                </select>
+
+                <label for="Fedu">Father' s Education:</label>
+                <select name="Fedu" id="Fedu" required>
+                    <option value="0">None</option>
+                    <option value="1">Primary education (up to 4th grade)</option>
+                    <option value="2">5th to 9th grade</option>
+                    <option value="3">Secondary education</option>
+                    <option value="4">Higher education</option>
+                </select>
+                
+                <button type="submit">Predict</button>
+            </form>
+            {% if prediction_text %}
+            <h3 id="prediction">{{ prediction_text }}</h3>
+            {% endif %}
+        </section>
+    </div>
+</main>
+<footer class="container">
+    <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></small>
+</footer>
+</body>
+</html>
